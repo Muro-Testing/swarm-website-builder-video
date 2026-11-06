@@ -1,0 +1,14 @@
+{
+  "name": "swarm-website-builder-video",
+  "version": "1.0.0",
+  "description": "Hundreds of cursors build a real HTML website while it scrolls, rendered to a 1080x1920 60 fps video with code.",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "preview": "node render.cjs samples out/frames",
+    "render": "node render.cjs full out/picture.mp4"
+  },
+  "dependencies": {
+    "playwright": "^1.48.0"
+  }
+}

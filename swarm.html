@@ -1,0 +1,32 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Swarm builder</title>
+<style>
+@font-face{font-family:DM;src:url(/assets/fonts/dm-sans.woff2) format('woff2');font-weight:100 1000}
+@font-face{font-family:UB;src:url(/assets/fonts/unbounded.woff2) format('woff2');font-weight:200 900}
+:root{--navy:#0b1630;--blue:#1677ff;--violet:#8a2bff;--cyan:#00e5ff;--red:#ff2a2a}
+html,body{margin:0;width:1080px;height:1920px;overflow:hidden;background:#030711;font-family:DM,sans-serif}
+#bg{position:absolute;inset:0;background:radial-gradient(1200px 900px at 50% 45%,#0d2a5a 0%,#05101f 45%,#030711 75%)}
+#grid{position:absolute;inset:-200px;background-image:linear-gradient(rgba(0,229,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(0,229,255,.06) 1px,transparent 1px);background-size:60px 60px}
+#cam{position:absolute;left:0;top:0;width:1080px;height:1920px;transform-origin:540px 900px}
+#browser{position:absolute;left:60px;top:250px;width:960px;height:1440px;border-radius:28px;background:#fff;box-shadow:0 40px 120px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.08),0 0 140px rgba(22,119,255,.25);overflow:hidden}
+#bar{position:absolute;left:0;top:0;right:0;height:64px;background:#eef1f6;border-bottom:1px solid #dde2ea;z-index:5}
+#bar i{position:absolute;top:24px;width:16px;height:16px;border-radius:50%}
+#url{position:absolute;left:120px;right:40px;top:14px;height:36px;border-radius:18px;background:#fff;border:1px solid #dde2ea}
+#view{position:absolute;left:0;top:64px;width:960px;height:1376px;overflow:hidden}
+#site{position:absolute;left:0;top:0;width:960px;height:2800px}
+.abs{position:absolute}
+#overlay{position:absolute;left:0;top:0;width:960px;height:0;overflow:visible;z-index:20}
+.sel{position:absolute;border:2px dashed #1677ff;background:rgba(22,119,255,.08);box-sizing:border-box}
+.txt{position:absolute;white-space:pre;color:var(--navy)}
+.txt span{display:inline-block;visibility:hidden}
+.caret{position:absolute;width:4px;background:#1677ff;border-radius:2px}
+.cur{position:absolute;left:0;top:0;width:34px;height:44px;will-change:transform}
+.ghost{position:absolute;left:0;top:0;width:34px;height:44px;opacity:.25}
+.tile{position:absolute;background-repeat:no-repeat;box-sizing:border-box}
+.ripple{position:absolute;border:3px solid #ff2a2a;border-radius:50%;box-sizing:border-box}
+</style></head><body>
+<div id="bg"></div>
+<div id="cam"><div id="grid"></div>
+<div id="browser"><div id="bar"><i style="left:28px;background:#ff5f57"></i><i style="left:54px;background:#febc2e"></i><i style="left:80px;background:#28c840"></i><div id="url"></div></div>
+<div id="view"><div id="site"></div></div></div>
+<div id="overlay"></div></div>
+<script src="/swarm.js"></script></body></html>
